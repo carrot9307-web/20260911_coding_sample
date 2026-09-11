@@ -4,10 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "start.bat",
+    "stop": "stop.bat",
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
     "preview": "vite preview",
-    "clean": "rm -rf dist server.js",
+    "clean": "node --input-type=module -e \"import fs from 'fs'; fs.rmSync('dist', {recursive: true, force: true});\"",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
