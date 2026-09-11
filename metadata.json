@@ -1,0 +1,6 @@
+{
+  "name": "專案管理與 RFI 追蹤系統",
+  "description": "結合看板式任務管理與 RFI (Request for Information) 追蹤機制的現代化專案協作平台",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
