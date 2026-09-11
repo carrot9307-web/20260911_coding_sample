@@ -10,7 +10,7 @@ set FOUND=0
 REM 搜尋所有佔用 3000 埠號且處於 LISTENING 狀態的 PID 並強制關閉
 for /f "tokens=5" %%a in ('netstat -aon ^| findstr :3000 ^| findstr LISTENING') do (
     set FOUND=1
-    echo [執行] 找到佔用 3000 埠號之進程 (PID: %%a)，正在強制關閉...
+    echo [執行] 找到佔用 3000 埠號之進程 PID: %%a，正在強制關閉...
     taskkill /F /PID %%a >nul 2>&1
 )
 
@@ -22,3 +22,4 @@ if %FOUND%==1 (
 
 echo ===================================================
 pause
+
